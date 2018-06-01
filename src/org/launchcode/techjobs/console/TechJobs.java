@@ -21,7 +21,6 @@ public class TechJobs {
         columnChoices.put("location", "Location");
         columnChoices.put("position type", "Position Type");
         columnChoices.put("all", "All");
-        columnChoices.put("findByValue", "FindByValue");
 
         // Top-level menu options
         HashMap<String, String> actionChoices = new HashMap<>();
@@ -63,10 +62,11 @@ public class TechJobs {
                 String searchTerm = in.nextLine();
 
                 if (searchField.equals("all")) {
-                    System.out.println("Search all fields not yet implemented.");
-                } else if (searchField.equals("findByValue")) {
+
+                    searchField.equals("findByValue");
                     printJobs(JobData.findByValue(searchTerm));
-                } else {
+
+                }   else {
                     printJobs(JobData.findByColumnAndValue(searchField, searchTerm));
 
                 }
